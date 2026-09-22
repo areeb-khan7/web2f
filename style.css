@@ -799,12 +799,36 @@ textarea:focus-visible {
 }
 
 @media (max-width: 560px) {
+  .container {
+    width: min(94%, var(--max-width));
+  }
+
   .section {
     padding: 4rem 0;
   }
 
   .hero {
     padding-top: 5rem;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 10vw, 2.4rem);
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.4rem;
+    scrollbar-width: none;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .btn {
@@ -817,6 +841,10 @@ textarea:focus-visible {
 
   .contact-form .btn {
     width: 100%;
+  }
+
+  .contact-details a {
+    word-break: break-word;
   }
 
   .pill-grid span {
